@@ -1,0 +1,120 @@
+/* General Reset */
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+}
+
+/* Container for the game */
+.container {
+  position: relative;
+  width: 600px; /* Updated width for a rectangular container */
+  height: 400px; /* Updated height for a rectangular container */
+  border: 2px solid #000;
+  background-color: #fff;
+  overflow: hidden; /* Prevent sprites from moving outside the container */
+}
+
+/* Sprites (PNG A and PNG B) */
+#spriteA, #spriteB {
+  position: absolute;
+}
+
+#spriteA {
+  width: 185px; /* Updated width */
+  height: 269px; /* Updated height */
+  left: 0; /* Start at the left edge */
+  top: calc(50% - 134.5px); /* Center vertically (269px / 2 = 134.5px) */
+}
+
+#spriteB {
+  width: 154px; /* Updated width */
+  height: 204px; /* Updated height */
+  right: 0; /* Start at the right edge */
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Adjust for exact centering */
+}
+
+/* Prompt Text ("PRESS F TO TALK TO KY") */
+#promptText {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 20px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 5px 10px;
+  border-radius: 5px;
+  z-index: 10; /* Ensure it appears above other elements */
+}
+
+/* Options (A to HOLD HANDS, B to KISS, C to ???) */
+#options {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 10; /* Ensure it appears above other elements */
+}
+
+#options button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#options button:hover {
+  background-color: #0056b3;
+}
+
+/* Animation Container */
+#animationContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10; /* Ensure it appears above other elements */
+}
+
+#animationContainer img {
+  width: 200px;
+  height: 200px;
+}
+
+/* Hidden Class */
+.hidden {
+  display: none !important; /* Forcefully hide the element */
+}
+
+/* Birthday Message */
+#birthdayMessage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  z-index: 10; /* Ensure it appears above other elements */
+}
